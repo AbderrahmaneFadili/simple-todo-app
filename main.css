@@ -1,0 +1,130 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font */
+  --font-family: "Lato", sans-serif;
+  --font-size: 16px;
+  /* colors  */
+  --white: #fff;
+  --darkslategrayOne: #472d2d;
+  --darkslategrayTwo: #553939;
+  --dimgray: #704f4f;
+  --rosybrown: #a77979;
+  --pink: #ffccd2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--rosybrown);
+  color: var(--white);
+}
+
+/* app */
+.app {
+  padding: 1rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+}
+
+input.input {
+  width: 80%;
+  font-family: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0.6rem 1rem;
+  color: var(--darkslategrayOne);
+  font-weight: bold;
+}
+
+input.input:focus {
+  border: 2px solid var(--darkslategrayOne);
+}
+
+input.input::placeholder {
+  font-weight: normal;
+}
+
+button.button {
+  width: 20%;
+  padding: 0.6rem 1rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--darkslategrayTwo);
+  color: var(--white);
+  transition: 0.4s ease-in-out;
+}
+
+button.button:hover {
+  background-color: var(--dimgray);
+  color: var(--white);
+}
+
+.todos {
+  background-color: var(--darkslategrayOne);
+  margin-top: 1rem;
+  height: 300px;
+  list-style: none;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.todo {
+  background-color: var(--dimgray);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: inherit;
+  margin-bottom: 1rem;
+}
+
+.todo__remove {
+  font-family: inherit;
+  padding: 0.5rem;
+  color: var(--pink);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.todo__remove:active {
+  opacity: 0.8;
+}
